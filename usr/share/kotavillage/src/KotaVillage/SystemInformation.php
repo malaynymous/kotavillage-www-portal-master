@@ -1,18 +1,18 @@
 <?php
-namespace Grase;
+namespace KotaVillage;
 
-/* Copyright 2008 Timothy White */
+/* Copyright 2016 Mohd Khazee */
 
-/*  This file is part of GRASE Hotspot.
+/*  This file is part of KOTAVILLAGE Hotspot.
 
-    http://grasehotspot.org/
+    http://kotavillage.tk/
 
-    GRASE Hotspot is free software: you can redistribute it and/or modify
+    KOTAVILLAGE Hotspot is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    GRASE Hotspot is distributed in the hope that it will be useful,
+    KOTAVILLAGE Hotspot is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
