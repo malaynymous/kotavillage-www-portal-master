@@ -1,0 +1,31 @@
+#!/usr/bin/make -f
+
+DEB_AUTO_UPDATE_DEBIAN_CONTROL = true
+
+export DH_OPTIONS=-X.git
+
+#DEB_DIVERT_EXTENSION = .kotavillage
+# Replace some base files with simple replacements.
+#DEB_DIVERT_FIiLES_grase-monit-conf += \
+#	/etc/issue.net.debathena \
+#	/etc/mailname.debathena \
+#	/etc/papersize.debathena
+#DEB_TRANSFORM_FILES_grase-monit-conf += \
+#	/etc/default/monit.kotavillage \
+#	/etc/monit/monitrc.kotavillage
+
+# These files are installed via dh_install from the files/ directory
+# (see debian/kotavillage-conf-monit.install)
+
+DEB_FIXPERMS_EXCLUDE := /etc/sudoers.d/kotavillage-www-portal
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/rules/config-package.mk
+
+build: build-stamp
+
+build-stamp:
+	dh_testdir
+	$(MAKE)
+	touch $@
+

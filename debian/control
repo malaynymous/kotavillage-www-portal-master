@@ -1,0 +1,13 @@
+Source: kotavillage-www-portal
+Section: unknown
+Priority: extra
+Maintainer: M Kazie <mkazie@kotavillage.tk>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.3
+Homepage: <insert the upstream URL, if relevant>
+
+Package: kotavillage-www-portal
+Architecture: all
+Depends: ${misc:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

@@ -1,0 +1,31 @@
+Source: kotavillage-www-portal
+Section: net
+Priority: extra
+Maintainer: M Kazie <mkazie@kotavillage.tk>
+Build-Depends: @cdbs@, config-package-dev
+Standards-Version: 3.9.1
+Homepage: http://kotavillage.tk/
+
+Package: kotavillage-www-portal
+Architecture: all
+Depends: ${misc:Depends}, grase-conf-freeradius (>= 1.9.4), php5-cli, php5, php-mdb2-driver-mysql, php-mdb2, php-auth, php5-intl, php-gettext, javascript-common, grase-conf-apache2 | grase-conf-nginx, dbconfig-common, mysql-client, mysql-server, gzip, grase-www-portal-ext-libs (= ${binary:Version}), wget
+Provides: ${diverted-files}
+Conflicts: ${diverted-files}
+Description: Portal files for the KOTAVILLAGE Hotspot System
+ The KOTAVILLAGE Hotspot System binds together CoovaChilli, Freeradius, MySQL,
+ and other systems as well as providing an administrative frontend to managing
+ users and other hotspot related tasks.
+ .
+ This package provides the portal webapps
+
+Package: kotavillage-www-portal-ext-libs
+Architecture: all
+Depends: ${misc:Depends}
+Provides: ${diverted-files}
+Conflicts: ${diverted-files}
+Description: External Libraries for the KOTAVILLAGE Hotspot System
+ The KOTAVILLAGE Hotspot System binds together CoovaChilli, Freeradius, MySQL,
+ and other systems as well as providing an administrative frontend to managing
+ users and other hotspot related tasks.
+ .
+ This package provides the external libraries for the portal webapps

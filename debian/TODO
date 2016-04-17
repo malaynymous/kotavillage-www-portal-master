@@ -1,0 +1,60 @@
+Centre Report tables
+    Dates
+    Start collapsed
+AC: Comment (Hide/More info)
+Tickets
+    Print Data .vs. Time
+    Print info about connecting
+    Print multiple batches
+    print_r tickets
+Logo rewrite info "about" "everypage"
+Usage bars
+    off login
+    onto status page
+    Red
+Header
+    gray lighter
+    repeat
+    text valign
+expired help
+Red name on over limit
+Red name on time limit
+Help in menu list (where can it go? needs to be obvious somewhere, not menu item. Maybe next to the current page button?)
+Longer logout timeout
+Back to users list with anchor from edit user                
+
+Machine accounts - Autopassword, own page, no "machine" group
+
+Storing some coova-chilli stuff in database
+    * hidden input with old value
+    * values into array
+    * compare old->new arrays. Where diff, do update
+    * Where new array longer than old, do insert
+    * Where update would result in inserting blank value, do delete
+Settings, merge some site details into 1 section, move logo to its own update logo page    
+
+Change how error messages are done (into array)
+ * Errors and validations move into a class?
+ * As it validates it sets error flag
+ * Check for class being an error, reshow form and error messsages
+ * Else show any messages from class. Simplifies pages. See UGMM being developed for PLUG by Tim White
+
+Internationalization
+
+Move validation functions to class?
+
+Check MySQL caching is active and functional (settings db will get hammered each page load)
+
+Defaults for Data and Time limits (for all types)
+
+PDF Tickets
+
+Computer account edit page
+
+HTML5 ?
+
+Admin users having different levels (so some who can only manage users, others who can manage the whole hotspot)
+
+Offsite backups of squid logs and mysql databases. Email, FTP, Dropbox?
+
+Change all old Help text (title attribute) methods to new help text method (spans) as this won't be affected by translations with a ' in the translation

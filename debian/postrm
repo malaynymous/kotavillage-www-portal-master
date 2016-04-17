@@ -1,0 +1,34 @@
+#!/bin/sh
+# postrm script for kotavillage-www-portal
+
+set -e
+#set -u # Interfers with debconf
+
+
+if [ -f /usr/share/debconf/confmodule ]; then
+    . /usr/share/debconf/confmodule
+fi
+if [ -f /usr/share/dbconfig-common/dpkg/postrm.mysql ]; then
+    . /usr/share/dbconfig-common/dpkg/postrm.mysql
+    dbc_go kotavillage-www-portal $@
+fi
+
+
+if [ "$1" = "purge" ]; then
+
+	# Remove smarty template_c folders
+	rm -rf /usr/share/kotavillage/www/radmin/templates_c 
+	rm -rf /usr/share/kotavillage/www/uam/templates_c 
+
+        rm -f /etc/kotavillage/radmin.conf
+        if which ucf >/dev/null 2>&1; then
+                ucf --purge /etc/kotavillage/radmin.conf
+                ucfr --purge kotavillage-www-portal /etc/kotavillage/radmin.conf
+        fi
+fi
+
+#DEBHELPER#
+
+if dpkg-maintscript-helper supports rm_conffile 2>/dev/null; then
+    dpkg-maintscript-helper rm_conffile /etc/apache2/conf.d/kotavillage.conf -- "$@"
+fi

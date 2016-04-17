@@ -1,0 +1,112 @@
+#!/bin/sh -e
+
+action="$1"
+oldversion="$2"
+
+umask 022
+
+# source debconf stuff
+. /usr/share/debconf/confmodule
+# source dbconfig-common stuff
+. /usr/share/dbconfig-common/dpkg/postinst.mysql
+
+mkdir -p /etc/kotavillage/
+
+dbc_first_version=3.0
+dbc_generate_include="template:/etc/kotavillage/radmin.conf"
+dbc_generate_include_perms="660"
+dbc_generate_include_owner="root:www-data"
+dbc_generate_include_args="-o template_infile=/usr/share/kotavillage/templates/radmin.conf -U"
+
+dbc_go kotavillage-www-portal $@
+
+
+
+if [ "$action" != configure ]
+  then
+  exit 0
+fi
+
+install_composer_deps(){ # Install composer and install/upgrade dependencies
+    cd /usr/share/kotavillage/
+    if [ ! -e 'composer.phar' ]; then
+        php -r "readfile('https://getcomposer.org/installer');" | php
+    fi
+    php composer.phar self-update
+    php composer.phar install
+}
+
+install_bower_deps(){ # Install Bower and install/upgrade depenencies
+    cd /usr/share/kotavillage/
+    npm install -g bower
+    bower update
+}
+
+call_cron(){ # Call cron so certain upgrades can occur
+    wget -q http://127.0.0.1/kotavillage/radmin/cron.php -O - || true
+}
+
+fix_dir_perms(){
+    chgrp www-data -R /usr/share/kotavillage/www/ || true
+    chmod ag+rw -R /usr/share/kotavillage/www/radmin/templates_c /usr/share/kotavillage/www/uam/templates_c >/dev/null 2>&1 || true
+    chmod ag+rw /usr/share/kotavillage/www/images || true
+
+}
+
+clear_template_cache(){
+    rm -f /usr/share/kotavillage/www/radmin/templates_c/* /usr/share/kotavillage/www/uam/templates_c/*
+}
+
+copy_favicon(){
+    cp -n /usr/share/kotavillage/www/favicon.ico /var/www/favicon.ico || true
+}
+
+unlink_logo(){
+    if [ -h /usr/share/kotavillage/www/images/logo.png ]
+    then
+        rm /usr/share/kotavillage/www/images/logo.png > /dev/null || true
+    fi
+
+}
+
+www_proxy_group(){
+    # www-data needs to be in proxy for log processing
+    adduser www-data proxy > /dev/null || true
+}
+#DEBHELPER#
+
+if dpkg-maintscript-helper supports rm_conffile 2>/dev/null; then
+    dpkg-maintscript-helper rm_conffile /etc/apache2/conf.d/grase.conf -- "$@"
+fi
+
+# Shouldn't need to link the logo thanks to new rewrites
+unlink_logo
+
+clear_template_cache
+
+#install_composer_deps
+
+# Debian 7 doesn't have npm easily installable
+#install_bower_deps
+
+fix_dir_perms
+
+copy_favicon
+
+call_cron
+
+www_proxy_group
+
+#a2enmod rewrite || true
+#a2enmod headers || true
+
+#if which invoke-rc.d >/dev/null 2>&1; then
+#       invoke-rc.d apache2 restart 3>&- || true
+#else
+#       /etc/init.d/apache2 restart 3>&- || true
+#fi
+
+
+exit 0
+
+
