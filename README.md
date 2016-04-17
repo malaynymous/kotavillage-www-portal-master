@@ -7,7 +7,7 @@ The GRASE Hotspot takes all the hard work out of keeping the individual componen
 
 ## Installation
 
-See the Wiki page <https://github.com/GraseHotspot/grase-www-portal/wiki/Installation>
+See the Wiki page <https://github.com/KotavillageHotspot/kotavillage-www-portal/wiki/Installation>
 
 ### kotavillage-www-portal package/repository
 
