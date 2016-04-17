@@ -7,7 +7,7 @@ The KOTAVILLAGE Hotspot takes all the hard work out of keeping the individual co
 
 ## Installation
 
-See the Wiki page <https://github.com/KotavillageHotspot/kotavillage-www-portal/wiki/Installation>
+See the Wiki page <https://github.com/malaynymous/kotavillage-www-portal-master/wiki>
 
 ### kotavillage-www-portal package/repository
 
