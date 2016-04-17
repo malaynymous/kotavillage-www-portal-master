@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is for bootstrapping the bare minimum needed for GRASE, and only what can't be done via the vendor
+ * This file is for bootstrapping the bare minimum needed for KOTAVILLAGE, and only what can't be done via the vendor
  * autoloader. All parts of the KOTAVILLAGE system should rely on the vendor/autoload.php and not this file
  */
 
