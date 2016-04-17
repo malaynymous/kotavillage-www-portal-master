@@ -1,6 +1,6 @@
 <?php
 
-namespace Grase;
+namespace KotaVillage;
 
 class VoucherWizard
 {
