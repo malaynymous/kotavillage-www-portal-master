@@ -1,11 +1,11 @@
 <?php
 namespace KotaVillage\SystemInformation;
 
-    /* Copyright 2008 Mohd Khazee */
+    /* Copyright 2016 Mohd Khazee */
 
 /*  This file is part of KOTAVILLAGE Hotspot.
 
-    http://ktavillagehotspot.tk/
+    http://kotavillagehotspot.tk/
 
     KOTAVILLAGE Hotspot is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
