@@ -1,5 +1,5 @@
 <?php
-/* Copyright 2012 Mohd Khazee */
+/* Copyright 2016 Mohd Khazee */
 
 /*  This file is part of KOTAVILLAGE Hotspot.
 
