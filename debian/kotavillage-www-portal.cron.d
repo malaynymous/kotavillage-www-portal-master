@@ -9,5 +9,5 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 @daily		    root    /usr/share/kotavillage/scripts/mysql_backup
 
 # Most cron scripts have moved to PHP classes actived by cron.php
-@hourly         nobody  wget -q http://127.0.0.1/grase/radmin/cron.php -O -
-@reboot         nobody  wget -q http://127.0.0.1/grase/radmin/cron.php -O -
+@hourly         nobody  wget -q http://127.0.0.1/kotavillage/radmin/cron.php -O -
+@reboot         nobody  wget -q http://127.0.0.1/kotavillage/radmin/cron.php -O -
