@@ -1,5 +1,5 @@
 <?php
-/* Copyright 2014 Mohd Khazee */
+/* Copyright 2016 Mohd Khazee */
 
 /*  This file is part of KOTAVILLAGE Hotspot.
 
@@ -16,7 +16,7 @@
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with GRASE Hotspot.  If not, see <http://www.gnu.org/licenses/>.
+    along with KOTAVILLAGE Hotspot.  If not, see <http://www.gnu.org/licenses/>.
 */
 namespace KotaVillage;
 
