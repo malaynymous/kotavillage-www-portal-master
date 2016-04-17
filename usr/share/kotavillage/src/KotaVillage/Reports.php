@@ -1,6 +1,6 @@
 <?php
 
-/* Copyright 2008 Mohd Khazee */
+/* Copyright 2016 Mohd Khazee */
 
 /*  This file is part of KOTAVLLAGE Hotspot.
 
