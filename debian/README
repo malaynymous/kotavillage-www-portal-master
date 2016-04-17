@@ -1,7 +1,7 @@
-The Debian Package grase-www-portal
+The Debian Package kotavillage-www-portal
 ----------------------------
 
 This package installs the webapps that make up the portal. UAM, Radmin,
 and Usermin.
 
- -- Tim White <tim@grasehotspot.org>  Sun, 25 Apr 2010 05:38:26 +0800
+ -- Mohd Khazee <mkazie@kotavillage.tk>  Sun, 10 Apr 2016 05:38:26 +0800
