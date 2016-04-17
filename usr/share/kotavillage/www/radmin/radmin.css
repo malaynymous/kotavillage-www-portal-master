@@ -1,0 +1,613 @@
+/* Copyright 2008 Mohd Khazee */
+
+body table {
+	text-align: left;
+}
+
+#logo {
+	background: url('../images/grase.png') bottom left no-repeat;	
+	position: fixed;
+	bottom: 0;
+	left: 30px;
+	height: 240px;
+	width: 160px;
+z-index: -1;
+}
+
+#sidebar {
+	width: 12em;
+	float: left;
+	height: 100%;
+
+}
+
+#menucontainer {
+    width: 10em;
+}
+
+#sidebartoggle {
+    margin-top: 2em;
+    height: 316px;
+    width: 16px;
+    text-align: center;
+    padding-top: 1em;
+    float: right;
+    font-size: 75%;
+	cursor: pointer;
+}
+
+#sidebartoggletext {
+
+    display: block;
+
+    margin-top: 50px;
+    background: url('/kotavillage/radmin/images/hide.png') center no-repeat;
+    
+    width: 12px;
+    height: 100px;
+
+
+}
+
+
+
+#sidebartogglebutton {
+    margin-top: 20px;
+}
+
+#sidebartogglebutton2 {
+    margin-top: 100px;
+}
+
+
+#pagecontent {
+    margin: 1em;
+    margin-left: 13em;
+    width: auto;
+}
+
+#menubar {
+}
+
+
+.expand, .collapse {
+    float: right;
+    width: 1em;
+    display: none;
+}
+
+.menu ul {
+	list-style: none;
+	margin: 0;
+
+
+}
+
+#menubar a {
+
+    text-decoration: none;
+    padding: 2px;
+    float: none;
+}
+
+#menubar li {
+    cursor: pointer;
+    padding: 0; 
+    display: block;
+}
+
+#menucontainer > ul > li {
+    width: 11em;
+    padding-top: 5px;
+
+}
+
+#menucontainer > ul > li > ul {
+    margin-bottom: 0.5em;
+}
+
+#menubar ul {
+    list-style: none outside none;
+    padding: 0;
+    position: relative;
+
+}
+
+#menucontainer > ul > li > ul > li > a {
+
+}
+
+#menubar a {
+	font-family: "Lucida Sans", Arial, Helvetica, Geneva, sans-serif;  
+    display: block;
+	width: 10em;
+	margin: 0;
+	padding-left: 1em;
+}
+
+#menucontainer li .topmenu {
+    font-style: italic;
+}
+
+
+#menubar .activemenuitem {
+    background-color:#6299c5;
+    border:1px solid #6299c5;
+    color:#fff;
+}
+
+#helplink a{
+	margin-top: 1em;
+}
+
+.helpbutton {
+    cursor:pointer;
+}
+
+#radminPage {
+	width: auto;
+	margin: auto;
+	margin-top: 0.5em;
+	margin-bottom: 2em;
+	margin-right: 0;
+	margin-left: 13em;
+	padding: 1em;
+}
+
+#loggedinusername {
+	color: gray;
+	padding: 0.5em;
+	padding-right: 1em;
+	display: block;
+	text-align: left;
+}
+
+.errorPage {
+	color: red;
+	border: red solid 1px;
+	padding: 1em;
+}
+
+/* Table */
+
+table  {
+    table-layout:fixed;
+    width:100%;
+    word-wrap:break-word;
+}
+
+table.jqplot-table-legend {
+    width: auto;
+}
+
+table td, table th {
+	text-align: left;
+	padding: 0.3em;
+	line-height: 1.5;
+}
+
+table th {
+.	text-align: center;
+	padding: 0.1em 0.5em;
+	font-size: 120%;
+	font-weight: bolder;	
+	background: #deedf7;	
+}	
+
+table td.title {
+	padding-left: 2em;
+	padding-right: 1em;
+}	
+
+th.header { 
+    background-image: url(/grase/images/bg.gif); 
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+    font-weight: bold; 
+    padding-right: 20px; 
+    border-right: 1px solid #dad9c7; 
+    margin-left: -1px; 
+} 
+
+th.headerSortDown { 
+    background-image: url(/grase/images/desc.gif); 
+    background-color: #3399FF; 
+} 
+
+th.headerSortUp { 
+    background-image: url(/grase/images/asc.gif); 
+    background-color: #3399FF; 
+} 
+
+#userslist table, #vouchersTable {
+    font-size: 70%;
+}
+
+#sessionslistTable, #activesessionslistTable {
+	font-size: 80%;
+}
+
+#AdminlogTable {
+}
+
+/* */
+
+
+/* Log view page */
+
+#logtables table {
+	padding-bottom: 1em;
+}
+
+.domainattributesRow, .logattributesRow {
+	font-weight: bolder;
+	text-align: center;
+	background: #999999;
+	font-size: 120%;
+
+}
+
+/* */
+
+.sessionrow td {
+	padding: 2px 10px;
+}
+
+.month_user_row td {
+	padding: 2px 10px;
+
+}
+
+.month_user_row .numbers, .totalrow .numbers {
+	text-align: right;
+}
+
+.totalrow td {
+	font-weight: bolder;
+}
+
+
+
+.tabcontent {
+    padding: 5px !important; /* Override jQuery UI CSS */
+}
+
+.userslistTable .userrow td {
+	padding: 0.2em 0.6em;
+}
+
+.monthheader {
+	font-weight: bolder;
+	background: lightblue;
+	background-image: url('images/minus.gif');
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 15px;
+}
+
+.even {
+	background: #deedf7;
+
+}
+.odd {
+
+}
+
+.expired /*, .expired a*/ {
+	background: orange;
+	color: black;
+}
+.expired a {
+	color: black;
+}
+
+.expired .info_expiry {
+	background: red;
+	color: yellow;
+	font-weight: bolder;
+}
+
+.locked .info_datausage a, .locked .info_datalimit, .locked .info_timeusage a /*, .locked a */{
+	color: red;
+	font-weight: bolder;
+
+}
+
+.info_password span {
+	float: right;
+	display: inline;
+}
+/*.lowdata, .lowdata a {
+	color: red;
+
+}*/
+#Machine_body tr, #Machine_body tr a {
+	color: gray;
+}
+
+#Nogroup_body tr {
+	background: pink;
+	color: black;
+}
+
+.nogroup .even {
+	color: black;
+}
+
+h1 {
+	margin: 0.2em;
+	margin-top: 0;
+	margin-bottom: 0.5em;
+}
+
+body {
+	color: #0a57a9;
+	background: white;
+	margin-top: 0;
+	padding: 1em;
+	padding-top: 0;
+}
+
+ul {
+	text-align: left;
+}
+
+ul#statusmon {
+	text-align: left;
+}
+
+ul#statusmon li {
+	width: 30%;
+	margin-right: 1em;
+	margin-bottom: 0.5em;
+	padding: 0.2em;
+	padding-left: 1em;
+	padding-top: 1em;
+	padding-right: 0;
+	float: left;
+	border: 1px solid #0a57a9;
+	 list-style-position: inside;
+    background-color:#f5f5f5;
+    border:1px solid #dedede;
+    border-top:1px solid #eee;
+    border-left:1px solid #eee;
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    height: 3em;
+}
+
+.running {
+	color: green;
+    color:#565656;
+	list-style-type: circle;
+	list-style-image: url(images/green.gif);
+}
+.stopped {
+	color: red;
+	list-style-type: square;
+	list-style-image: url(images/red.gif);
+}
+.nomon {
+	color: blue;
+	list-style-image: url(images/blue.gif);
+}
+.warn {
+	color: orange;
+}
+
+.time {
+	color: black;
+	font-size: 80%;
+}
+
+.paginate {
+    text-align: center;
+    width: 75%;
+    margin: auto;
+
+}
+
+/* Forms extra stuff */
+
+.datacost_list, .timecost_list {
+    padding: 0;
+    list-style: none;
+    display:block;
+    float:right;
+    margin-bottom: 5px;
+    background-color:#f5f5f5;
+    border:1px solid #dedede;
+    border-top:1px solid #eee;
+    border-left:1px solid #eee;
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    font-size:100%;
+    text-decoration:none;
+    font-weight:bold;
+    color:#565656;
+    cursor:pointer;
+    margin-right: 5px;
+}
+
+.datacost_item, .timecost_item {
+    display: block;
+    color:#565656;
+    padding-left: 0.5em;
+    padding-right: 1em;
+    width: 11em;
+}
+
+.datacost_item:hover, .timecost_item:hover {
+    background-color:#dff4ff;
+    color:#336699;
+}
+/* end forms extra stuff */
+
+/* Cutout tickets stuff */
+.cutout_ticket {
+	outline: solid 1px black;
+	margin-top: 1.5em;
+}
+
+/* End Cutout Tickets stuff */
+
+/******* FORM *******/
+.generalForm{
+	padding: 0 10px 10px;
+	margin: 0px auto;
+	text-align: left;
+	line-height: 1.4em;	
+}
+.generalForm label{
+	display: block;
+/*	color: #797979;*/
+    color: black;
+	font-weight: 700;
+	line-height: 1.4em;
+	clear: right;
+}
+.generalForm input, .generalForm select{
+	width: 220px;
+	padding: 6px;
+    color: black;
+	font-family: Arial,  Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	border: 1px solid #cecece;
+}
+
+.generalForm .mediuminput{
+	width: 110px; 
+}
+
+.generalForm .smallinput{
+	width: 6em; 
+}
+
+
+.generalForm input.error{
+	background: #f8dbdb;
+	border-color: #e77776;
+}
+/*.generalForm textarea{
+	width: 550px;
+	height: 80px;
+	padding: 6px;
+	color: #adaeae;
+	font-family: Arial,  Verdana, Helvetica, sans-serif;
+	font-style: italic;
+	font-size: 12px;
+	border: 1px solid #cecece;
+}
+.generalForm textarea.error{
+	background: #f8dbdb;
+	border-color: #e77776;
+}*/
+.generalForm > div{
+	margin-bottom: 15px;
+}
+.generalForm > div > span {
+	margin-left: 10px;
+
+	font-size: 11px;
+
+	font-style: italic;
+}
+.generalForm div span.error{
+	color: #e46c6e;
+}
+.generalForm #send{
+	background: #6f9ff1;
+	color: #000;
+	font-weight: 700;
+	font-style: normal;
+	border: 0;
+	cursor: pointer;
+}
+
+.generalForm #send:hover{
+	background: #79a7f1;
+}
+#error{
+	margin-bottom: 20px;
+	border: 1px solid #efefef;
+}
+#error ul{
+	list-style: square;
+	padding: 5px;
+	font-size: 11px;
+}
+#error ul li{
+	list-style-position: inside;
+	line-height: 1.6em;
+}
+#error ul li strong{
+	color: #e46c6d;
+}
+#error.valid ul li strong{
+	color: #93d72e;
+}
+
+.messagewidget {
+    min-width: 15em;
+    width: 50%;
+    margin: auto;
+}
+
+
+.CodeMirror {
+    color: black;
+}
+
+.generalForm iFrame {
+    width: 100%;
+    border: solid 2px yellow;
+}
+
+/******* /FORM *******/
+
+.ui-icon {
+    display: inline-block !important; /* Override jQuery UI of display: block */
+}
+
+
+
+/* JSadd and JSRemove stuff */
+.jsadd, .jsremove {
+    display: none;
+    width: 10em;
+}
+
+.tpllocation {
+    font-style: normal !important;
+
+}
+
+/* CodeMirrorUI overrides due to float/clear problem with sidebar */
+
+.codemirror-ui-button-frame{
+    height: 24px;
+}
+
+.codemirror-ui-clearfix:after {
+     clear: none !important;
+ }
+ 
+/* End CodeMirrorUI Overrides */
+
+dl {
+    margin-bottom:50px;
+}
+ 
+dl dt {
+    background:#5f9be3;
+    color:#fff;
+    float:left;
+    font-weight:bold;
+    margin-right:10px;
+    padding:5px;
+    width:50px;
+}
+ 
+dl dd {
+    margin:2px 0;
+    padding:5px 0;
+}
