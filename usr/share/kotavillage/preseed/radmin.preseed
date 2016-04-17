@@ -1,0 +1,4 @@
+kotavillage-www-portal kotavillage-www-portal/dbconfig-install boolean true
+kotavillage-www-portal kotavillage-www-portal/mysql/app-pass password 
+kotavillage-www-portal kotavillage-www-portal/database-type select mysql
+kotavillage-www-portal kotavillage-www-portal/db/dbname string radmin
