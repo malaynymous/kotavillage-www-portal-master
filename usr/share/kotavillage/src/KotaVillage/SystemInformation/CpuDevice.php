@@ -1,7 +1,7 @@
 <?php
 namespace KotaVillage\SystemInformation;
 
-    /* Copyright 2008 Mohd Khazee */
+    /* Copyright 2016 Mohd Khazee */
 
 /*  This file is part of KOTAVILLAGE Hotspot.
 
@@ -18,7 +18,7 @@ namespace KotaVillage\SystemInformation;
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with GRASE Hotspot.  If not, see <http://www.gnu.org/licenses/>.
+    along with KOTAVILLAGE Hotspot.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 class CpuDevice
