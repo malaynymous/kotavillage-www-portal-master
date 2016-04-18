@@ -11,7 +11,7 @@
 
 var challenge = null;
 
-var ident = '00';
+var ident = "00";
 
 var logintype = "";
 
@@ -21,7 +21,7 @@ var chilliController = {
     interval: 30,
     host: "###SERVERIPADDRESS###",
     port: 3990,
-    ident: '00',
+    ident: "00",
     ssl: false,
     uamService: ''
 };
@@ -141,7 +141,7 @@ function tos_getresponse() {
 
 function get_challenge() {
 
-    if (typeof (challenge) != 'string') {
+    if (typeof (challenge) != "string") {
         $.ajax(
             {
                 url: urlRoot + 'status?callback=?',
@@ -150,7 +150,7 @@ function get_challenge() {
                 success: function (resp) {
                     // Check for valid challenge
 
-                    if (typeof (resp.challenge) != 'string') {
+                    if (typeof (resp.challenge) != "string") {
                         clear_error_messages();
                         display_error('Unable to get secure challenge');
                         return false;
@@ -256,11 +256,11 @@ function process_reply(resp) {
 
     //alert(resp);
     // Check for message (error)
-    if (typeof (resp.message) == 'string') {
+    if (typeof (resp.message) == "string") {
         error_message(resp.message);
     }
 
-    if (typeof (resp.challenge) == 'string') {
+    if (typeof (resp.challenge) == "string") {
         challenge = resp.challenge;
     }
 
